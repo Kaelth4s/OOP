@@ -1,0 +1,10 @@
+08.05.2025 20:14:23 Свойство 'Attribute1' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: test
+08.05.2025 20:14:23 Свойство 'Attribute2' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: 123
+12.05.2025 23:13:30 Свойство 'Attribute1' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: test
+12.05.2025 23:13:30 Свойство 'Attribute2' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: 123
+12.05.2025 23:13:39 Свойство 'Attribute1' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: test
+12.05.2025 23:13:39 Свойство 'Attribute2' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: 123
+12.05.2025 23:13:43 Свойство 'Attribute1' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: test
+12.05.2025 23:13:43 Свойство 'Attribute2' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: 123
+12.05.2025 23:14:22 Свойство 'Attribute1' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: test
+12.05.2025 23:14:22 Свойство 'Attribute2' изменилось у OOP.Lab4.NotifyDataChanged.ConcreteObservable. Текущее значение: 123
