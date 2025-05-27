@@ -20,27 +20,30 @@ namespace OOP
 {
     public class Program
     {
+        public static readonly int WIDTH = 20;
+        public static readonly int HEIGHT = 20;
+
         static void Main(string[] args)
         {
             // Lab1
-            //Point2d point1 = new Point2d(1, 2);
-            //Point2d point2 = new Point2d(1, 2);
-            //if (point1 == point2) Console.WriteLine(point1.ToString());
+            Point2d point1 = new Point2d(1, 2);
+            Point2d point2 = new Point2d(1, 2);
+            if (point1 == point2) Console.WriteLine(point1.ToString());
 
-            //Vector2d vector1 = new Vector2d(1, 2);
-            //Vector2d vector2 = new Vector2d(2, 2);
-            //Vector2d vector3 = vector1 * 2;
-            //Console.WriteLine(vector3.ToString());
-            //foreach (int n in vector1)
-            //{
-            //    Console.WriteLine(n);
-            //}
-            //Console.WriteLine(Vector2d.Dot(vector2, vector1));
-            //Console.WriteLine(vector1[1]);
+            Vector2d vector1 = new Vector2d(1, 2);
+            Vector2d vector2 = new Vector2d(2, 2);
+            Vector2d vector3 = vector1 * 2;
+            Console.WriteLine(vector3.ToString());
+            foreach (int n in vector1)
+            {
+                Console.WriteLine(n);
+            }
+            Console.WriteLine(Vector2d.Dot(vector2, vector1));
+            Console.WriteLine(vector1[1]);
 
 
 
-            // Lab2
+            //Lab2
             //Printer.Print("lab", Color.GREEN, (5, 5), "%");
             //Console.WriteLine("test");
             //using (Printer printer = new(Color.RED, (4, 20), "|"))
