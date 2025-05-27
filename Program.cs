@@ -25,12 +25,12 @@ namespace OOP
             // Lab1
             //Point2d point1 = new Point2d(1, 2);
             //Point2d point2 = new Point2d(1, 2);
-            //if (point1 == point2) Console.WriteLine(point1.ToStringRepresents());
+            //if (point1 == point2) Console.WriteLine(point1.ToString());
 
             //Vector2d vector1 = new Vector2d(1, 2);
             //Vector2d vector2 = new Vector2d(2, 2);
             //Vector2d vector3 = vector1 * 2;
-            //Console.WriteLine(vector3.ToStringRepresents());
+            //Console.WriteLine(vector3.ToString());
             //foreach (int n in vector1)
             //{
             //    Console.WriteLine(n);
@@ -43,7 +43,7 @@ namespace OOP
             // Lab2
             //Printer.Print("lab", Color.GREEN, (5, 5), "%");
             //Console.WriteLine("test");
-            //using (Printer printer = new(Color.RED, (4, 17), "|"))
+            //using (Printer printer = new(Color.RED, (4, 20), "|"))
             //{
             //    printer.Print("using text");
             //}
@@ -58,10 +58,14 @@ namespace OOP
             //    new ReLogFilter(new Regex(@"\d{4}"))
             //};
 
+
+            //string path = Directory.GetCurrentDirectory();
+            //path = path.Remove(path.IndexOf("OOP") + 3) + "\\Lab3\\log.txt";
+
             //List<ILogHandler> handlers = new()
             //{
             //    new ConsoleHandler(),
-            //    new FileHandler("C:/Users/Archkael/Projects/IKBFU Projects/Visual Studio/OOP/Lab3/log.txt"),
+            //    new FileHandler(path),
             //    new SyslogHandler(),
             //    new SocketHandler()
             //};
@@ -104,22 +108,24 @@ namespace OOP
 
 
             // Lab5
-            //UserRepository userRepository = new("C:/Users/Archkael/Projects/IKBFU Projects/Visual Studio/OOP/Lab5/" + "users.json");
-            //AuthService authService = new();
+
+            //string path = Directory.GetCurrentDirectory();
+            //path = path.Remove(path.IndexOf("OOP") + 3) + "\\Lab5\\";
+            //UserRepository userRepository = new(path);
+            //AuthService authService = new(path, userRepository);
 
             //if (authService.IsAuthenticated)
             //{
-            //    Console.WriteLine($"Автоматически авторизован: {authService.CurrentUser!.Name}");
             //    Console.WriteLine("Желаете сменить пользователя? (y/n)");
-            //    string answer = Console.ReadLine();
+            //    string answer = Console.ReadLine()!;
             //    if (answer == "y")
             //    {
             //        Console.WriteLine("Введите логин пользователя:");
-            //        User userToAuth = userRepository.GetByLogin(Console.ReadLine());
+            //        User userToAuth = userRepository.GetByLogin(Console.ReadLine()!)!;
+            //        Console.WriteLine($"Введите пароль для {userToAuth.Login}");
             //        if (userToAuth != null && Console.ReadLine() == userToAuth.Password)
             //        {
             //            authService.SignIn(userToAuth);
-            //            Console.WriteLine($"Авторизован пользователь {userToAuth.Name}");
             //        }
             //    }
             //    else if (answer == "n")
@@ -131,22 +137,17 @@ namespace OOP
 
             //    User newUser = new(0, "Artem", "Archkael", "qwerty");
             //    userRepository.Add(newUser);
-            //    Console.WriteLine($"Добавлен новый пользователь {newUser.Name}");
 
             //    User newUser1 = new(1, "Stepan", "Stepanella", "qwerty1");
             //    userRepository.Add(newUser1);
-            //    Console.WriteLine($"Добавлен новый пользователь {newUser1.Name}");
 
-            //    User updatedUser = newUser with { Email = "archieshn@gmail.com" };
+            //    User updatedUser = newUser with { Email = "archieasdshn@gmail.com" };
             //    userRepository.Update(updatedUser);
-            //    Console.WriteLine($"Обновлена почта пользователя {updatedUser.Name}, текущее значение: {updatedUser.Email}");
 
-            //    User userToAuth = userRepository.GetByLogin("Archkael");
+            //    User userToAuth = userRepository.GetByLogin("Archkael")!;
+            //    Console.WriteLine($"Введите пароль для {userToAuth.Login}");
             //    if (userToAuth != null && Console.ReadLine() == userToAuth.Password)
-            //    {
             //        authService.SignIn(userToAuth);
-            //        Console.WriteLine($"Авторизован пользователь {userToAuth.Name}");
-            //    }
             //}
 
 
@@ -219,6 +220,15 @@ namespace OOP
 
             //    i3_1.Run();
             //}
+
+            //Console.WriteLine("\n==== Using Config C ====");
+            //injector = new();
+            //ConfigC.Configure(injector);
+
+            //IInterface3 i3 = injector.GetInstance<IInterface3>();
+            //i3.Run();
+
+            //IInterface2 i2 = injector.GetInstance<IInterface2>();
         }
     }
 }

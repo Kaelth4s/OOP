@@ -5,7 +5,7 @@
         private readonly Color _COLOR;
         private readonly (int, int) _POSITION;
         private readonly string _SYMBOL;
-        private static readonly Dictionary<char, string[]> _FONT = LoadFont("font.txt");
+        private static readonly Dictionary<char, string[]> _FONT = LoadFont("font2.txt");
 
         public Printer(Color color, (int, int) position, string symbol)
         {
@@ -80,7 +80,9 @@
         private static Dictionary<char, string[]> LoadFont(string fileName)
         {
             Dictionary<char, string[]> font = new();
-            string[] lines = File.ReadAllLines("C:/Users/Archkael/Projects/IKBFU Projects/Visual Studio/OOP/Lab2/" + fileName);
+            string path = Directory.GetCurrentDirectory();
+            path = path.Remove(path.IndexOf("OOP") + 3) + "\\Lab2\\";
+            string[] lines = File.ReadAllLines(path + fileName);
 
             for (int i = 0; i < lines.Length;)
             {

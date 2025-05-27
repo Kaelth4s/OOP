@@ -11,7 +11,14 @@
 
         public void Handle(string text)
         {
-            File.AppendAllText(_FILE_PATH, DateTime.Now.ToString() + " " + text + "\n");
+            try
+            {
+                File.AppendAllText(_FILE_PATH, $"{DateTime.Now} " + text + "\n");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

@@ -4,7 +4,7 @@
     {
         public void Handle(string text)
         {
-            Console.WriteLine(DateTime.Now.ToString() + " " + text);
+            Console.WriteLine($"{DateTime.Now} " + text);
         }
     }
 }

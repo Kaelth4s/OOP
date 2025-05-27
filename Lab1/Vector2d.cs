@@ -43,21 +43,13 @@
             _y = y;
         }
 
-        public Vector2d(Point2d start, Point2d end)
-        {
-            _x = end.X - start.X;
-            _y = end.Y - start.Y;
-        }
+        public Vector2d(Point2d start, Point2d end) : this(end.X - start.X, end.Y - start.Y) { }
 
         // methods
+
         public override string ToString()
         {
-            return "Вектор с координатами x: " + _x.ToString() + ", y: " + _y.ToString();
-        }
-
-        public string ToStringRepresents()
-        {
-            return "Vector2d(" + _x.ToString() + ", " + _y.ToString() + ")";
+            return $"Vector2d({_x}, {_y})";
         }
 
         public Vector2d Abs()

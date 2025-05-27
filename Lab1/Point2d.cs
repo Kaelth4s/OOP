@@ -2,9 +2,9 @@
 {
     public class Point2d
     {
-        // const
-        private const int _WIDTH = 20;
-        private const int _HEIGHT = 20;
+        // statics readonly
+        public static readonly int WIDTH = 20;
+        public static readonly int HEIGHT = 20;
 
         // fields
         private int _x;
@@ -16,7 +16,7 @@
             get { return _x; }
             set
             {
-                if (value >= 0 && value <= _WIDTH) _x = value;
+                if (value >= 0 && value <= WIDTH) _x = value;
                 else throw new ArgumentOutOfRangeException();
             }
         }
@@ -26,7 +26,7 @@
             get { return _y; }
             set
             {
-                if (value >= 0 && value <= _HEIGHT) _y = value;
+                if (value >= 0 && value <= HEIGHT) _y = value;
                 else throw new ArgumentOutOfRangeException();
             }
         }
@@ -41,12 +41,7 @@
         // methods
         public override string ToString()
         {
-            return "Точка с координатами x: " + _x.ToString() + ", y: " + _y.ToString();
-        }
-
-        public string ToStringRepresents()
-        {
-            return "Point2d(" + _x.ToString() + ", " + _y.ToString() + ")";
+            return $"Point2d({_x}, {_y})";
         }
 
         // static methods
