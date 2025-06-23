@@ -13,7 +13,14 @@ namespace OOP.Lab3.LogFilters
 
         public bool Match(string text)
         {
-            return _PATTERN.IsMatch(text);
+            try
+            {
+                return _PATTERN.IsMatch(text);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

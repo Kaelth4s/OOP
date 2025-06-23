@@ -11,7 +11,14 @@
 
         public bool Match(string text)
         {
-            return text.Contains(_PATTERN);
+            try
+            {
+                return text.Contains(_PATTERN);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
